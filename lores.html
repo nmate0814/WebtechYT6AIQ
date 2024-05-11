@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styles2.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
     <script src="scripts2.js"></script>
+   
     <title>Destiny 2</title>
   </head>
   <body>
@@ -19,39 +20,7 @@
         <li><a id="buttonSupport" href="help.html">Kapcsolat</a></li>
       </ul>
     </header>
-
-   <audio id="myVid" src="Videos/The Entire Story Of Destiny! (Creation To Lightfall) (128kbps).mp3"></audio>
-
-    <button id="button" onclick="playPause()">Play/Pause</button>
-    <button id="button" onclick="seekForward()">Forward</button><br>
-    <button id="button" onclick="volumeDown()">VolumeDown</button>
-    <button id="button" onclick="volumeUp()">VolumeUp</button>
-
-    <script>
-    var video = document.getElementById("myVid");         
-    function playPause() {
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }
-    
-    function volumeUp() {
-      if (video.volume < 1.0) {
-        video.volume += 0.1;
-      }
-    }
-    
-    function volumeDown() {
-      if (video.volume > 0.0) {
-        video.volume -= 0.1;
-      }
-    }
-    
-    function seekForward() {
-      video.currentTime += 30;
-    }
-  </script>
+    <iframe id="youtube-player" width="560" height="315" id="myVid" src="https://www.youtube.com/embed/NHaq0EbeHHQ?si=9dEGnaxam-pQs9Fr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <script src="https://www.youtube.com/iframe_api"></script>  
   </body>
 </html>

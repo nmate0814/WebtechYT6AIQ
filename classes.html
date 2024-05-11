@@ -88,11 +88,11 @@
     <script>
       $(document).ready(function(){
         $.getJSON("subclassok.json",function(data){
-          $("#subclassok_").append(`<a href="${data.subclassok[0].link}">${data.subclassok[0].name}</a> ${data.subclassok[0].description}`);
-          $("#subclassok_1").append(`<a href="${data.subclassok[1].link}">${data.subclassok[1].name}</a> ${data.subclassok[1].description}`);
-          $("#subclassok_2").append(`<a href="${data.subclassok[2].link}">${data.subclassok[2].name}</a> ${data.subclassok[2].description}`);
-          $("#subclassok_4").append(`<a href="${data.subclassok[3].link}">${data.subclassok[3].name}</a> ${data.subclassok[3].description}`);
-          $("#subclassok_5").append(`<a href="${data.subclassok[4].link}">${data.subclassok[4].name}</a> ${data.subclassok[4].description}`);
+          $("#subclassok_").append(`<a href="${data.subclassok[0].link}" target=_blank>${data.subclassok[0].name}</a> ${data.subclassok[0].description}`);
+          $("#subclassok_1").append(`<a href="${data.subclassok[1].link}" target=_blank>${data.subclassok[1].name}</a> ${data.subclassok[1].description}`);
+          $("#subclassok_2").append(`<a href="${data.subclassok[2].link}" target=_blank>${data.subclassok[2].name}</a> ${data.subclassok[2].description}`);
+          $("#subclassok_4").append(`<a href="${data.subclassok[3].link}" target=_blank>${data.subclassok[3].name}</a> ${data.subclassok[3].description}`);
+          $("#subclassok_5").append(`<a href="${data.subclassok[4].link}" target=_blank>${data.subclassok[4].name}</a> ${data.subclassok[4].description}`);
         });
       });
 
