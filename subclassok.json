@@ -1,0 +1,31 @@
+{
+    "subclassok":
+    [
+      {
+        "name": "Solar",
+        "description": "Napenergián alapú subclass.",
+        "link": "https://www.destinypedia.com/Solar"
+      },
+      {
+        "name": "Void",
+        "description": "Üresenergia alapú subclass.",
+        "link": "https://www.destinypedia.com/Void"
+      },
+      {
+        "name": "Arc",
+        "description": "Villámenergia alapú subclass.",
+        "link": "https://www.destinypedia.com/Arc"
+      },
+      {
+        "name":"Strand",
+        "description": "Sötétségen alapuló subclass",
+        "link": "https://www.destinypedia.com/Strand"
+      },
+      {
+        "name": "Stasis",
+        "description": "Fagyon alapú subclass",
+        "link": "https://www.destinypedia.com/Stasis"
+      }
+    ]
+  }
+  

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <title>Destiny 2</title>
+
+    <style>
+      video{
+        width: 500px;
+      }
+
+      button{
+        border-radius: 5px;
+        color: white;
+        background-color: #666;
+        width: 100px;
+        height: 75px;
+      }
+
+      button:hover{
+        background-color: cadetblue;
+      }
+
+      p{
+        font-weight: bolder;
+        color:yellowgreen;
+      }
+
+      .lid{
+        font-size:20px;
+        box-shadow: 0 0 0 0;
+        border-radius: 0px;
+        color:#fff;
+        background-color: transparent;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <header align="center">
+      <br>
+      <ul>
+        <li><a id="buttonIndex" href="index.html">Főoldal</a></li>
+        <li><a id="buttonClasses" href="classes.html">Classok</a></li>
+        <li><a id="buttonStory" href="lores.html">Történet</a></li>
+        <li><a id="buttonExpansions" href="expansions.html">Expansion</a></li>
+        <li><a id="buttonSupport" href="help.html">Kapcsolat</a></li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item">Hunter</div>
+        <div class="grid-item">Titan</div>
+        <div class="grid-item">Warlock</div>
+        <div class="grid-item">A Hunter egy Guardian osztály, amely a mobilitásra, a lopakodásra és a lövészetre specializálódott. A hunterek jól bánnak a pengékkel, és gyorsabban veszik elő a fegyvereitek, a „határ mestereiként” ismertek. A hunterek jól megérdemelt hírneve, hogy élvezik a vadonban töltött időt, ami miatt néha bajba sodorja őket a parancsnokaikkal.</div>
+        <div class="grid-item">A Titan egy Guardian osztály, amely a páncélzatra specializálódott. Az első Titánok építették és védték a Várost védelmező falat. A képességük az erőben, az áldozatkészségben és a könyörtelenségben gyökerezik.</div>
+        <div class="grid-item">A Warlock egy Guardian osztály a Destinyben, amely arra specializálódott, hogy az Utazó által adott „mágikus” erőket modern fegyverekkel kombinálja. A warlockok már régóta tanulmányozzák az Utazót, amiből ered az a képességük, hogy hasznosítani tudják annak egyes erőit. Ahogy a warlockok szintet lépnek előre, az arcane erejük egyre erősebbé válik.</div>
+        <div class="grid-item"><video id="vidHunter" src="Videos/Destiny 2 - Hunter Class Guide.mp4"></video></div>
+        <div class="grid-item"><video id="vidTitan" src="Videos/Destiny 2 - Titan Class Guide.mp4"></video></div>
+        <div class="grid-item"><video id="vidWarlock" src="Videos/Destiny 2 - Warlock Class Guide.mp4"></video></div>
+        <div class="grid-item"><button onclick="playPause()">Play/Pause</button><button onclick="seekForward()">Forward</button><br><button onclick="volumeUp()">VolumeUp</button><button onclick="volumeDown()">VolumeDown</button></div>
+        <div class="grid-item"><button onclick="playPauseT()">Play/Pause</button><button onclick="seekForwardT()">Forward</button><br><button onclick="volumeUpT()">VolumeUp</button><button onclick="volumeDownT()">VolumeDown</button></div>
+        <div class="grid-item"><button onclick="playPauseW()">Play/Pause</button><button onclick="seekForwardW()">Forward</button><br><button onclick="volumeUpW()">VolumeUp</button><button onclick="volumeDownW()">VolumeDown</button></div>
+      </div>
+    </div>
+
+    <P>&nbsp;&nbsp;&nbsp;Öt féle subclassal vagyis skill tree-vel rendelkeznek:</p>
+      <ul>
+        <li class="lid">Light</li><br>
+        
+        <ul>
+          <li class="lid" id="subclassok_">
+          <li class="lid" id="subclassok_1">
+          <li class="lid" id="subclassok_2">
+        </ul>
+        <li class="lid">Darkness</li>
+        <ul>
+            <li class="lid" id="subclassok_4">
+            <li class="lid" id="subclassok_5">
+        </ul>
+      </ul>
+
+    <script>
+      $(document).ready(function(){
+        $.getJSON("subclassok.json",function(data){
+          $("#subclassok_").append(`<a href="${data.subclassok[0].link}">${data.subclassok[0].name}</a> ${data.subclassok[0].description}`);
+          $("#subclassok_1").append(`<a href="${data.subclassok[1].link}">${data.subclassok[1].name}</a> ${data.subclassok[1].description}`);
+          $("#subclassok_2").append(`<a href="${data.subclassok[2].link}">${data.subclassok[2].name}</a> ${data.subclassok[2].description}`);
+          $("#subclassok_4").append(`<a href="${data.subclassok[3].link}">${data.subclassok[3].name}</a> ${data.subclassok[3].description}`);
+          $("#subclassok_5").append(`<a href="${data.subclassok[4].link}">${data.subclassok[4].name}</a> ${data.subclassok[4].description}`);
+        });
+      });
+
+
+      var video = document.getElementById("vidHunter");         
+function playPause() {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+
+function volumeUp() {
+  if (video.volume < 1.0) {
+    video.volume += 0.1;
+  }
+}
+
+function volumeDown() {
+  if (video.volume > 0.0) {
+    video.volume -= 0.1;
+  }
+}
+
+function seekForward() {
+  video.currentTime += 30;
+}
+
+var video2 = document.getElementById("vidTitan");
+function playPauseT() {
+  if (video2.paused) {
+    video2.play();
+  } else {
+    video2.pause();
+  }
+}
+
+function volumeUpT() {
+  if (video2.volume < 1.0) {
+    video2.volume += 0.1;
+  }
+}
+
+function volumeDownT() {
+  if (video2.volume > 0.0) {
+    video2.volume -= 0.1;
+  }
+}
+
+function seekForwardT() {
+  video2.currentTime += 30;
+}
+
+var video3 = document.getElementById("vidWarlock");
+function playPauseW() {
+  if (video3.paused) {
+    video3.play();
+  } else {
+    video3.pause();
+  }
+}
+
+function volumeUpW() {
+  if (video3.volume < 1.0) {
+    video3.volume += 0.1;
+  }
+}
+
+function volumeDownW() {
+  if (video3.volume > 0.0) {
+    video3.volume -= 0.1;
+  }
+}
+
+function seekForwardW() {
+  video3.currentTime += 30;
+}
+    </script>
+  </body>
+</html>

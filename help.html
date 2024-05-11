@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="scripts.js"></script>
+    <title>Destiny 2</title>
+  </head>
+  <body>
+    <header align="center">
+      <br>
+      <ul>
+        <li><a id="buttonIndex" href="index.html">Főoldal</a></li>
+        <li><a id="buttonClasses" href="classes.html">Classok</a></li>
+        <li><a id="buttonStory" href="lores.html">Történet</a></li>
+        <li><a id="buttonExpansions" href="expansions.html">Expansion</a></li>
+        <li><a id="buttonSupport" href="help.html">Kapcsolat</a></li>
+      </ul>
+    </header>
+
+    <form id="supportForm" action="javascript:void(0);" onsubmit="submitForm()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="username">Felhasználónév:</label>
+        <input type="text" id="username" name="username" required>
+      
+        <label for="ticketType">Ticket típusa:</label>
+        <select id="ticketType" name="ticketType">
+          <option value="Technikai">Technikai probléma</option>
+          <option value="Ötlet">Ötleti kérdés</option>
+          <option value="Egyéb">Egyéb</option>
+        </select>
+      
+        <label for="message">Közlemény:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      
+        <input type="submit" value="Küldés">
+      </form>
+
+      <footer class="footer">
+        <div class="social-icons" >
+          <a href="https://www.facebook.com/" class="social-icon" target="_blank"><img src="Pictures/facebook-icon.png" alt="Facebook"></a>
+          <a href="https://twitter.com/home?lang=hu" class="social-icon" target="_blank"><img src="Pictures/twitter-icon.png" alt="Twitter"></a>
+          <a href="https://www.instagram.com/" class="social-icon" target="_blank"><img src="Pictures/instagram-icon.png" alt="Instagram"></a>
+        </div>
+      </footer>
+  </body>
+</html>
